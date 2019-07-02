@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main(){
+    int n,s,total;
+
+    while(scanf("%d%d",&n,&s)==2){
+        total=n;
+
+        while(n>=s){
+           int rem=n/s;
+           total=total+rem;
+           n=rem+(n%s);
+        }
+        printf("%d\n",total);
+    }
+
+
+return 0;
+}
